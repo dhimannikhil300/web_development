@@ -1,95 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100&family=Rubik&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,800&family=Montserrat:wght@800&display=swap');
+:root{
+    --back-color:#F1E4FF;
+}
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 .wrapper{
-    background-color: rgba(210, 195, 178, 0.774);
-    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.card{
-    width: 550px;
-    height: 323.7px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100wh;
     background-color: white;
-    border-radius: 14px;
-}
-#mug{
-    width: 15.2rem;
-    /* height: 19.5rem; */
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-#head{
-    /* font-family: 'Fraunces', sans-serif; */
-    position: relative;
-    top: -5px;
-    font-family: 'Rubik', sans-serif;
-    font-size: 15px;
-    letter-spacing: 3px;
-    font-weight: 500;
-    color: rgb(159, 156, 154);
-}
-#heading{
-    font-family: 'Fraunces', serif;
-    font-size: 26px;
-    letter-spacing: -1px;
-    font-weight:900;
-    line-height: 26px;
-    position: relative;
-    top: -17px;
-}
-#para{
-    margin-right: 20px;
-    font-family: 'Rubik', sans-serif;
-    color: rgb(159, 156, 154);
-    font-size: 14px;
-
-}
-#finalprize{
-    font-family: 'Fraunces', serif;
-    color: rgb(7, 147, 112);
-    font-size: 27px;
-    letter-spacing: -1px;
-    font-weight:900;
-    line-height: 26px;
-    position: relative;
-    top: 20px;
-}
-#mrp{
-    font-family: 'Rubik', sans-serif;
-    color: rgb(159, 156, 154);
-    font-size: 14px;
-    letter-spacing: -1px;
-    font-weight:200;
-    line-height: 26px;
-    position: relative;
-    top: 20px;
-    left: 15px;
-}
-.cart{
-    background-color: rgb(7, 147, 112);
-    position: relative;
-    top: 50px;
-    width: 235px;
-    height: 30px;
-    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#addtocart{
-    font-family: 'Rubik', sans-serif;
-    color: white;
+.container{
+    height: 600px;
+    width: 600px;
+    background-color: white;
     position: relative;
-    left: 12px;
-    font-size: 14px;
+    
 }
+.circle{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 100%;
+}
+.outer{
+    border: 4px solid var(--back-color);
+    animation:rotateall 55s linear infinite;
+
+}
+
+.outer-inner{
+    height: 70%;
+    width: 70%;
+    top: 15%;
+    left: 15%;
+    border: 6rem solid var(--back-color);
+    animation:rotateopp 55s linear infinite;
+    
+}
+#amazon{
+    height: 40%;
+    position: absolute;
+    top: -10%;
+    animation:rotateopp 55s linear infinite;
+}
+#apple{
+    height: 40%;
+    position: absolute;
+    top: -15%;
+    left: 50%;
+    animation:rotateopp 55s linear infinite;
+}
+#google{
+    height: 40%;
+    position: absolute;
+    top: 20%;
+    right: -18%;
+    animation:rotateopp 55s linear infinite;
+}
+#netflix{
+    height: 40%;
+    position: absolute;
+    bottom: -10%;
+    right: 0%;
+    animation:rotateopp 55s linear infinite;
+}
+#micosoft{
+    height: 40%;
+    position: absolute;
+    bottom: -15%;
+    right: 50%;
+    animation:rotateopp 55s linear infinite;
+}
+#meta{
+    height: 40%;
+    position: absolute;
+    top: 35%;
+    left: -18%;
+    animation:rotateopp 55s linear infinite;
+}
+#ola{
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    animation:rotateall 55s linear infinite;
+}
+#flipkard{
+    height: 90%;
+    position: absolute;
+    top: 0%;
+    left: -40%;
+    animation:rotateall 55s linear infinite;
+}
+#linkedin{
+    height: 90%;
+    position: absolute;
+    top: -50%;
+    left: 0%;
+    animation:rotateall 55s linear infinite;
+}
+#adobe{
+    height: 90%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    animation:rotateall 55s linear infinite;
+}
+@keyframes rotateall{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes rotateopp{
+    0%{
+        transform: rotateZ(-0deg);
+    }
+    50%{
+        transform: rotateZ(-180deg);
+    }
+    100%{
+        transform: rotateZ(-360deg);
+    }
+}
+
